@@ -31,6 +31,24 @@ gulp.task('concat', function() {
 });
 ```
 
+## Load all task by other package.json file?
+```javascript
+var gulp = require('gulp');
+require('gulp-all-tasks')({package:'other/package/file'});
+```
+
+## Load all task by other prefix?
+```javascript
+var gulp = require('gulp');
+require('gulp-all-tasks')({prefix:['other-*','@*/other-*']});
+```
+
+## Load all task by other scope?
+```javascript
+var gulp = require('gulp');
+require('gulp-all-tasks')({dependencies:['dependencies', 'otherScope']});
+```
+
 ## Want to contribute?
 
 > All help are more than welcome!
