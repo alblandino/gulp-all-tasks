@@ -1,0 +1,36 @@
+{
+    "name": "gulp-all-tasks",
+    "version": "1.0.0",
+    "description": "Gulp plugin to load all tasks",
+    "license": "MIT",
+    "repository": "jblandino/gulp-all-tasks",
+    "author": {
+        "name": "Joel A. Jaime",
+        "email": "joel.alexander.jaime@gmail.com",
+        "url": "http://blandino.info/"
+    },
+    "engines": {
+        "node": ">=0.10.0"
+    },
+    "scripts": {
+        "test": "mocha --timeout 50000"
+    },
+    "files": [
+        "index.js"
+    ],
+    "keywords": [
+        "gulpplugin",
+        "all",
+        "tasks",
+        "load",
+        "total",
+        "totaltasks",
+        "alltasks"
+    ],
+    "dependencies": {
+
+    },
+    "devDependencies": {
+
+    }
+}
