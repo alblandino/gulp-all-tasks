@@ -1,4 +1,4 @@
-ll-tasks
+# gulp-all-tasks
 [![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/jblandino/gulp-all-tasks)
 
 [![Gitter](https://github.com/gulpjs/artwork/blob/master/gulp.png)](https://gitter.im/jblandino/gulp-all-tasks)
@@ -66,5 +66,3 @@ To run all tests:
 ### Credits
 
 **gulp-all-tasks** was created by [Joel A. Jaime](http://github.com/jblandino) for the world.
-
-Gulp plugin to load all tasks
