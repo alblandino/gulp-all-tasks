@@ -20,10 +20,10 @@ var replace_line = function(search, replace, text){
 
 // Principal definition
 var gulp_all_tasks = function(options){
-
+	options = {};
 	// Default options
 	var default_options = {
-		package: '../../package.json',
+		package: options.package || 'package.json',
 		// Prefixes
 		prefixes: convert_array(options.prefix || ['gulp-*', '@*/gulp-*']),
 		// dependencies scope
@@ -46,13 +46,10 @@ var gulp_all_tasks = function(options){
 	mathc(plugin_name,default_options.prefixes).forEach(function(i,v){
 		var current_name = replace_line('-','_',i);
 		// convert to function
-		global[current_name] = function(){
-			return require(i);
-		}
+		global[current_name] = require(i);
 	});
-	console.log(global);
 }
 
-gulp_all_tasks({});
+// gulp_all_tasks({});
 // export module
 module.exports = gulp_all_tasks;
