@@ -46,13 +46,10 @@ var gulp_all_tasks = function(options){
 	mathc(plugin_name,default_options.prefixes).forEach(function(i,v){
 		var current_name = replace_line('-','_',i);
 		// convert to function
-		global[current_name] = function(){
-			return require(i);
-		}
+		global[current_name] = require(i);
 	});
-	console.log(global);
 }
 
-gulp_all_tasks({});
+// gulp_all_tasks({});
 // export module
 module.exports = gulp_all_tasks;
