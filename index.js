@@ -20,10 +20,10 @@ var replace_line = function(search, replace, text){
 
 // Principal definition
 var gulp_all_tasks = function(options){
-
+	options = {};
 	// Default options
 	var default_options = {
-		package: '../../package.json',
+		package: options.package || 'package.json',
 		// Prefixes
 		prefixes: convert_array(options.prefix || ['gulp-*', '@*/gulp-*']),
 		// dependencies scope
