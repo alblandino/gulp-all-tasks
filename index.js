@@ -50,6 +50,5 @@ var gulp_all_tasks = function(options){
 	});
 }
 
-// gulp_all_tasks({});
 // export module
 module.exports = gulp_all_tasks;
