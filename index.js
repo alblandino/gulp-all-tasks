@@ -12,39 +12,47 @@ var convert_array = function(arr){
 	return Array.isArray(arr) ? arr : [arr];
 }
 
+// Replace all - in plugin name
+var replace_line = function(search, replace, text){
+	var regex = new RegExp(search, 'g');
+	return text.replace(regex, replace);;
+}
+
 // Principal definition
 var gulp_all_tasks = function(options){
 
 	// Default options
 	var default_options = {
-		package:options.package || 'package.json',
+		package: '../../package.json',
 		// Prefixes
-		prefixes: options.prefix || ['gulp-*', '@*/gulp-*'],
+		prefixes: convert_array(options.prefix || ['gulp-*', '@*/gulp-*']),
 		// dependencies scope
 		dependencies: options.dependencies || ['dependencies', 'devDependencies']
 	};
 
 	// Load package.json from project
-	var file = require(path.resolve(find(default_options.package)));
+	var file = require(path.resolve(default_options.package));
 
 	// Doc for Array.prototype.reduce
 	// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce
 	var plugin_name = default_options.dependencies.reduce(function(r, p) {
 		var t = file[p];
-		return r.concat(Array.isArray(t) ? t : Object.keys(t));
+		if(typeof t == 'object'){
+			return Object.keys(t);
+		}
 	}, []);
 
-	// Load tasks and assign variables
+	// // Load tasks and assign variables
 	mathc(plugin_name,default_options.prefixes).forEach(function(i,v){
-		var current_name = i.replace('-', '_');
+		var current_name = replace_line('-','_',i);
 		// convert to function
 		global[current_name] = function(){
 			return require(i);
 		}
 	});
-
 	console.log(global);
 }
 
+gulp_all_tasks({});
 // export module
 module.exports = gulp_all_tasks;
