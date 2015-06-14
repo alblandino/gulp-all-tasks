@@ -1,7 +1,7 @@
 # gulp-all-tasks
 [![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/jblandino/gulp-all-tasks)
 
-[![Gitter](https://github.com/gulpjs/artwork/blob/master/gulp.png)](https://gitter.im/jblandino/gulp-all-tasks)
+[![Gulpjs](https://raw.githubusercontent.com/gulpjs/artwork/master/gulp.png)](https://gitter.im/jblandino/gulp-all-tasks)
 
 
 ## Installation
