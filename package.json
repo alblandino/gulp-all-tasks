@@ -1,36 +1,37 @@
 {
-    "name": "gulp-all-tasks",
-    "version": "1.0.0",
-    "description": "Gulp plugin to load all tasks",
-    "license": "MIT",
-    "repository": "jblandino/gulp-all-tasks",
-    "author": {
-        "name": "Joel A. Jaime",
-        "email": "joel.alexander.jaime@gmail.com",
-        "url": "http://blandino.info/"
-    },
-    "engines": {
-        "node": ">=0.10.0"
-    },
-    "scripts": {
-        "test": "mocha --timeout 50000"
-    },
-    "files": [
-        "index.js"
-    ],
-    "keywords": [
-        "gulpplugin",
-        "all",
-        "tasks",
-        "load",
-        "total",
-        "totaltasks",
-        "alltasks"
-    ],
-    "dependencies": {
-
-    },
-    "devDependencies": {
-
-    }
+  "name": "gulp-all-tasks",
+  "version": "1.0.0",
+  "description": "Gulp plugin to load all tasks",
+  "main": "index.js",
+  "dependencies": {
+    "findup-sync": "^0.2.1",
+    "multimatch": "^2.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "mocha ./test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jblandino/gulp-all-tasks.git"
+  },
+  "keywords": [
+    "gulpplugin",
+    "all",
+    "tasks",
+    "load",
+    "total",
+    "totaltasks",
+    "alltasks"
+  ],
+  "author": {
+    "name": "Joel A. Jaime",
+    "email": "joel.alexander.jaime@gmail.com",
+    "url": "http://blandino.info/"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jblandino/gulp-all-tasks/issues"
+  },
+  "homepage": "https://github.com/jblandino/gulp-all-tasks"
 }
